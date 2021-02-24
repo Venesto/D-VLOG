@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      const marc = {
+        nom: "Marc",
+        age: 26,
+        moyenne: 15
+      }
+      if (marc.age >= 18) {
+        console.log('Tu es majeur');
+      } else {
+        console.log('Tu es mineur');
+      }
+
+      if (marc.age >= 18) {
+        console.log('Tu peux passer ton permis');
+      } else if (marc.age >= 15) {
+        console.log('Tu peux passer la conduite accompagnée');
+      } else {
+        console.log('Tu ne peux pas conduire');
+      }
+
+      if (marc.age >= 18 && marc.age <= 25) {
+        console.log('Bravo, tu as le droit au tarif jeune')
+      } else {
+        console.log("Vous n'avez pas accès au tarif jeune");
+      }
+      
+      if (marc.age < 18 || marc.age > 25) {
+        console.log("Vous n'avez pas accès au tarif jeune")
+      } else {
+        console.log('Bravo, tu as le droit au tarif jeune')
+      }
+
+      switch (marc.age) {
+        case 18:
+          console.log('Bravo, tu as 18 ans')
+          break
+        case 25:
+          console.log('Bravo, tu as un quart de siècle')
+          break
+        case 50:
+          console.log('Bravo, tu as un demi siècle')
+          break
+        default: console.log('Bon anniversaire');
+      }
+
+      console.log(marc.age >= 18 ? 'Tu es majeur' : 'Tu es mineur');
+
+      ///////////////////////////////////////////////////////////
+
+      let i = 0
+      while (i < 11) {
+        console.log(i)
+        if (i == 3) {
+        }
+        i++
+      }
+      console.log('salut');
+
+      for(var j = 0; j < 11; j++) {
+        console.log(j);
+      }
+      console.log('Salut toi');
+
+      const eleves = ['Jean', 'Marc', 'Marion', 'Antoine']
+      for(let i = 0; i < eleves.length; i++) {
+        let eleve = eleves[i]
+        console.log('Bonjour ' + eleves[i]);
+      }
+      // --> Prénoms dans l'ordre
+      for(let i = eleves.length -1; i >= 0; i--) {
+        let eleve = eleves[i]
+        console.log('Bonjour ' + eleve);
+      }
+      // --> Prénoms dans le désordre
+
+      // Test nombre premier
+      const nombre = 91
+      let estPremier = true
+
+      for(let i = 2; i < nombre; i++) {
+        if (nombre % i === 0) {
+          estPremier = false
+          console.log("Ce nombre n'est pas premier")
+          console.log(nombre + ' est divisible par ' + i)
+          break
+        }
+      }
+      if (estPremier) {
+        console.log(nombre + ' est premier');
+      }
+
+      // Exercice élèves
+
+      const etudiants = [{
+        nom: 'Marc',
+        moyenne: 15
+      }, {
+        nom: 'Marion',
+        moyenne: 8
+      }, {
+        nom: 'Antoine',
+        moyenne: 4
+      }, {
+        nom: 'Jean',
+        moyenne: 14
+      }]
+      console.log(etudiants[0].nom);
+  
+      for(let i = 0; i < etudiants.length; i++) {
+        let etudiant = etudiants[i]
+        if (etudiant.moyenne < 10) {
+          console.log(etudiant.nom + " n'a pas la moyenne");
+        } else {
+          console.log(etudiant.nom + " a la moyenne");
+        }
+      }
+    </script>
+  </head>
+  <body>
+  
+  </body>
+</html>
