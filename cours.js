@@ -128,6 +128,110 @@
   }
 
 
+  // FONCTIONS //
+
+
+  function nombrePremier(number) {
+    for(let i = 2; i < number; i++) {
+      if (number % i === 0) {
+        return false
+      }
+    }
+    return true
+  }
+  function multiplie(a, b) {
+    return a * b
+  }
+
+  const classA = [{
+    nom: 'Marc',
+    moyenne: 15
+  }, {
+    nom: 'Marion',
+    moyenne: 8
+  }, {
+    nom: 'Antoine',
+    moyenne: 4
+  }, {
+    nom: 'Jean',
+    moyenne: 14
+  }]
+  const classB = [{
+    nom: 'Sebastien',
+    moyenne: 8
+  }, {
+    nom: 'Marine',
+    moyenne: 6
+  }, {
+    nom: 'Pedro',
+    moyenne: 14
+  }, {
+    nom: 'Violette',
+    moyenne: 14
+  }]
+
+  function afficheQuiALaMoyenne(students) {
+    for (let i = 0; i < students.length; i++) {
+      let student = students[i]
+      if (student.moyenne >= 10) {
+        console.log(student.nom + " a la moyenne");
+      }
+    }
+  }
+  afficheQuiALaMoyenne(classA)
+  afficheQuiALaMoyenne(classB)
+
+  const aLaMoyenne = function (students) {
+    const moyennes = []
+    for (let i = 0; i< students.length; i++) {
+      let student = students[i]
+      if (student.moyenne >= 10) {
+        moyennes.push(student)
+      }
+    }
+    return moyennes
+  }
+  console.log(aLaMoyenne(classA));
+
+  const eleve1 = {
+    nom: 'Jean',
+    notes: [15, 16, 18, 2]
+  }
+  const eleve2 = {
+    nom: 'Marc',
+    notes: [5, 18, 20, 18]
+  }
+  const moyenne = function (notes) {
+    let somme = 0
+    for (let i = 0; i < notes.length; i++) {
+      somme = somme + notes[i]
+    }
+    return somme / notes.length
+  }
+  console.log(moyenne(eleve1.notes))
+  console.log(moyenne(eleve2.notes))
+
+  const estMeilleur = function (a, b) {
+    return moyenne(a.notes) > moyenne(b.notes)
+  }
+  console.log(estMeilleur(eleve1, eleve2));
+
+  //ParseInt --> mettre chaine de caractères en nombre
+  //ParseFloat --> Mettre chaine de caractères en nombre à virgules
+  
+  /* fonction quand c'est une fonction générale
+    méthode quand c'est une fonction sur un objet */
+
+
+  // PORTÉE DES VARIABLES ET HOISTING
+
+
+  /* Les fonctions ont accès aux variables extérieures à elles-mêmes
+    const a =/= a 
+
+    Les variables ont une portée limitée seulement dans le cadre des fonctions */
+
+
  // THIS //
 
 
@@ -160,3 +264,13 @@
       eleve.present()
   /* Jean
   Jean present */
+
+
+  // PROTOTYPES //
+
+  
+  // TRY CATCH //
+
+
+  /* Le try catch sert à afficher ton site malgré des erreurs bloquantes.
+  Il sert également à éclaircir l'erreur en question */
